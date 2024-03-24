@@ -9,6 +9,16 @@ public class Ingrediente {
         this.cantidad = cantidad;
     }
 
+    public void sacar(int retiro){
+        if (this.cantidad >= retiro) {
+            this.cantidad -= retiro;
+            System.out.println("Se sacaron " + retiro + " unidad/es de " + nombre );
+        } else {
+            System.out.println("La cantidad actual (" + cantidad + ") de " + nombre + " es inferior a la cantidad que quieres sacar (" + retiro + ")");
+        }
+
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -28,4 +38,5 @@ public class Ingrediente {
     public String toString(){
         return  "El ingrediente " + nombre + " tiene una cantidad de " + cantidad + " unidades";
     }
+
 }
