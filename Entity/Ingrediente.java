@@ -36,7 +36,7 @@ public class Ingrediente {
     }
 
     public String toString(){
-        return  "El ingrediente " + nombre + " tiene una cantidad de " + cantidad + " unidades";
+        return  nombre + " " + cantidad;
     }
 
 }
