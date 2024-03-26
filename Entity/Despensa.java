@@ -6,6 +6,14 @@ import java.util.List;
 public class Despensa {
     private List<Ingrediente> ingredientes = new ArrayList<>();
 
+    public List<Ingrediente> getIngredientes() {
+        return ingredientes;
+    }
+
+    public void setIngredientes(List<Ingrediente> ingredientes) {
+        this.ingredientes = ingredientes;
+    }
+
     public void addingrediente(Ingrediente newIngrediente){
         ingredientes.add(newIngrediente);
         System.out.println("Se agrego " + newIngrediente.getNombre() + " a la despensa");

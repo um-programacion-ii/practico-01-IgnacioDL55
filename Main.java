@@ -1,9 +1,11 @@
 import Entity.*;
+import Service.CocinaService;
 
 public class Main {
     public static void main(String[] args){
         Ingrediente ingredientes = new Ingrediente("huevos", 10);
         Ingrediente zanahoria = new Ingrediente("zanahoria", 5);
+        Ingrediente agua = new Ingrediente("agua", 500);
 
         System.out.println(ingredientes);
         System.out.println(zanahoria);
@@ -18,6 +20,7 @@ public class Main {
 
         despensa1.addingrediente(ingredientes);
         despensa1.getIngrediente(ingredientes , 2);
+        despensa1.addingrediente(agua);
 
         System.out.println(ingredientes);
 
@@ -32,6 +35,10 @@ public class Main {
         Tostada tostada = new Tostada();
         System.out.println("Receta para la tostada:");
         System.out.println(tostada);
+
+        System.out.println("----------------------------------------------------------------------------------");
+        Chef chef1 = new Chef("Gordon Ramsay",14);
+        CocinaService.preparacion(chef1,huevoDuro,despensa1.getIngredientes());
 
 
     }
